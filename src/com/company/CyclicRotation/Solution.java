@@ -1,7 +1,5 @@
-package com.company.CyclicRotation;
+package com.company.cyclicRotation;
 
-
-import com.company.Gap.Main;
 
 import java.util.Arrays;
 
@@ -22,7 +20,7 @@ public class Solution {
         after[0] = before[before.length - 1];
 
         System.out.println("after: " + Arrays.toString(after));
-        
+
     }
 
     }
