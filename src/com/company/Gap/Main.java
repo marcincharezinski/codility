@@ -1,4 +1,4 @@
-package com.company.Gap;
+package com.company.gap;
 
 import java.util.ArrayDeque;
 import java.util.Collections;
