@@ -1,4 +1,4 @@
-package com.company.CyclicRotation;
+package com.company.cyclicRotation;
 
 
 public class Solution {
