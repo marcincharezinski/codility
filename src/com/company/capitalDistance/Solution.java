@@ -1,28 +1,41 @@
 package com.company.capitalDistance;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 class Solution {
 
     public static void main(String[] args) {
         int[] T = {9, 1, 4, 9, 0, 4, 8, 9, 0, 1};
-        int i;
-        int actualValue = 1;
+        int i, j;
 
-//        Map map = new HashMap<>();
-//        for (i = 0; i < T.length; i++) {
-//            map.put(i, T[i]);
-//        }
-//
-//        System.out.println(map);
 
-        for (i = 0; i < T.length; i++) {
-            if (T[i] == actualValue & T[i] != i) {
-                System.out.print("childern: " + i);
-                actualValue = i;
+        Map map = new HashMap<>();
+
+
+        System.out.println(map);
+        for (j = 0; j < T.length; j++) {
+            System.out.println(" ");
+
+
+            int actualValue = T[j];
+            System.out.println("Szukam bezpośrednich sąsiadów dla: " + actualValue);
+
+            for (i = 0; i < T.length; i++) {
+                if (T[i] == actualValue & i != actualValue) {
+                    System.out.print("childern: " + i + " ");
+                    map.put(actualValue, i);
+
+                }
+
+
             }
+
+
         }
+        System.out.println("mapa: " + map);
     }
 
 
