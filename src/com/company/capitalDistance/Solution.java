@@ -1,9 +1,7 @@
 package com.company.capitalDistance;
 
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 class Solution {
 
@@ -12,14 +10,19 @@ class Solution {
         int i;
         int actualValue = 1;
 
-        Map map = new HashMap<>();
-        for (i = 0; i < T.length; i++) {
-            map.put(i, T[i]);
-        }
-        if (map.containsValue(actualValue)) {
+//        Map map = new HashMap<>();
+//        for (i = 0; i < T.length; i++) {
+//            map.put(i, T[i]);
+//        }
+//
+//        System.out.println(map);
 
+        for (i = 0; i < T.length; i++) {
+            if (T[i] == actualValue & T[i] != i) {
+                System.out.print("childern: " + i);
+                actualValue = i;
+            }
         }
-        System.out.println(map);
     }
 
 
