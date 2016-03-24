@@ -1,47 +1,46 @@
 package com.company.capitalDistance;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 class Solution {
 
     public static void main(String[] args) {
         int[] T = {9, 1, 4, 9, 0, 4, 8, 9, 0, 1};
         int i, j;
+        Map<Integer, List> map = new HashMap<>();
+        List list = new ArrayList<>();
 
-
-        Map map = new HashMap<>();
-
-
-        System.out.println(map);
         for (j = 0; j < T.length; j++) {
-            System.out.println(" ");
-
-
             int actualValue = T[j];
-            System.out.println("Szukam bezpośrednich sąsiadów dla: " + actualValue);
 
             for (i = 0; i < T.length; i++) {
-                if (T[i] == actualValue & i != actualValue) {
-                    System.out.print("childern: " + i + " ");
-                    map.put(actualValue, i);
+                if (T[i] == actualValue & i != actualValue)
+                    list.add(i);
+            }
+            map.put(actualValue, new ArrayList<>(list));
+            list.clear();
+        }
+        System.out.println("mapa: " + map);
+        int root = 1;
+        List returnList = new ArrayList<>();
 
-                }
+        for (Map.Entry<Integer, List> entry : map.entrySet()) {
+            Integer key = entry.getKey();
+            List value = entry.getValue();
+            // ...
+
+            if (key == root) {
+                System.out.println("Lista: " + map.get(root));
+                returnList.add(map.get(root));
+            }
+            if () {
 
 
             }
-
-
         }
-        System.out.println("mapa: " + map);
     }
 
 
-    public static int[] solution(int[] T) {
-        return null;
-    }
 }
 
 class Node<T> {
